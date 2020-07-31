@@ -155,6 +155,11 @@ export default {
               }
             }
           },
+          toolbox: {
+              feature: {
+                  dataView: {show: true, readOnly: true},
+              }
+          },
           legend: {
             top: 20,
             icon: 'rect',
