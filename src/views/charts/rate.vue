@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import Chart from '@/components/Charts/LineMarker'
+import Chart from '@/components/Charts/RateMarker'
 
 export default {
-  name: 'LineChart',
+  name: 'RateChart',
   components: { Chart },
   data(){
     return {
@@ -63,7 +63,7 @@ export default {
           spinner: 'el-icon-loading',
           background: 'rgba(0, 0, 0, 0.7)'
       }); 
-      this.$http.post('api/htxshz/get',{deptid:this.query.deptid[3],yearlist:this.query.yearlist})
+      this.$http.post('api/htxshz/getrate',{deptid:this.query.deptid[3],yearlist:this.query.yearlist})
       .then(res=>{
         this.chartData=res.data.data||[]
         this.$nextTick(()=>{

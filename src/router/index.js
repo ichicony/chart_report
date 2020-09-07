@@ -10,6 +10,11 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/charts/line.vue')
   },
   {
+    path: '/rate',
+    name: 'Rate',
+    component: () => import(/* webpackChunkName: "about" */ '../views/charts/rate.vue')
+  },
+  {
     path: '/zg_lc',
     name: 'Zg_LC',
     component: () => import('../views/charts/zg-lcavg.vue')
